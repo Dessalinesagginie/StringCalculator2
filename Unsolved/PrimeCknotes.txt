@@ -1,0 +1,448 @@
+Things Learned During Exercise
+
+function primeCheck(n) {    
+    if (n <= 2 ) { 
+        return false
+    }
+
+    for (let i = 2; i < n; i++) {
+        var temp = n % i
+
+        if (n % i === 0) {
+            return false
+        }   
+    }
+  
+    return true
+}
+
+console.log(primeCheck(7))
+
+
+1. Read, understand, and follow instructions carefully
+
+2. plan strategy for how to solve issue before you start writing code
+
+3. write 1 comment and 1 line of code then debug that line 
+
+4. understand what code is doing
+
+5. if using a loop, know exactly what each loop section is doing
+
+
+
+
+Javascript for Kids
+
+Booleans
+
+1.A Boolean value is simply a value that’s either 
+true or false.
+
+2. The 3 main Boolean operators in JavaScript are &&, ||, 
+and !.
+
+3.Use the && (and), “and,” “and,” or “ampersand-ampersand.”  operator with two Boolean values to see if 
+they’re both true.
+
+4. The Boolean operator || means “or.” It can be pronounced “or,” or 
+even “or-or,” but some people call the | character a pipe. 
+
+5. You can use this operator with 2 
+Boolean values to find out whether either one is true.
+
+6. EG: 
+var hasApple = true;
+var hasOrange = false;
+
+32 Chapter 2
+hasApple || hasOrange;
+true
+
+7.! just means “not.”
+
+8. (An exclamation point is sometimes called a bang.) Use it 
+to turn false into true or true into false.
+
+9. EG: 
+needToShowerToday;
+false
+!needToShowerToday;
+true
+
+Comparing Numbers with Booleans
+
+10. We can use the greater-than operator (>) to 
+see if one number is greater than another. 
+
+11. EG:
+var height = 65;
+var heightRestriction = 60;
+height > heightRestriction;
+true
+
+12. The opposite of the greater-than operator (>) is the less-than operator(<). 
+
+13. EG:
+var height = 60;
+var heightRestriction = 48;
+height < heightRestriction;
+false
+
+Equal To
+
+14. To find out if two numbers are exactly the 
+same, use the triple equal sign (===).  
+=== means “are these two numbers equal?”.
+
+15. = means “save the value on the right in 
+the variable on the left.” In other words, ===
+asks a question, while = assigns a value to a 
+variable
+
+16. JavaScript operator 
+(double equals, or ==) means “equal-ish.”
+
+17. If you use === to compare the number 5 and the 
+string "5", JavaScript will tell you they’re not =. But if you 
+use == to compare them, it will tell you they’re the same
+
+18. EG:
+var stringNumber = "5";
+var actualNumber = 5;
+stringNumber === actualNumber;
+false
+stringNumber == actualNumber;
+true
+
+19. Finish this example using the age
+and accompanied variables to work out 
+whether this 12-year-old is allowed 
+to see the movie. Try changing the 
+values (for example, set age to 13 and 
+accompanied to false) and see if your 
+code still works out the right answer 
+
+var age = 12;
+var accompanied = true;
+allowed in
+
+age = 13
+accompanied = false
+allowed in
+
+
+20. undefined is the value JavaScript uses when it doesn’t have a 
+value for something. For example, when you create a new variable, 
+if you don’t set its value to anything using the = operator, its value 
+will be set to undefined
+
+
+21. The null value is usually used when you want to deliberately 
+say “This is empty.”
+var myNullVariable = null;
+myNullVariable;
+null4
+
+22. It’s not very common to set something to 
+undefined; if you feel the need to set a variable to “nothing,” you 
+should use null instead.
+null is used only when you actually want to say something’s 
+not there
+
+
+Conditionals
+23. There are two forms of conditional statements in JavaScript: if
+statements and if...else statements.
+
+24. An if statement is used to execute a piece of code if something is true. For example, if you’ve 
+been good, you get a treat. An if...else statement executes one 
+piece of code if something is true and another if not.
+
+25. if…else Statements
+
+var name = "Nicholas";
+console.log("Hello " + name);
+
+if (name.length > 7) {
+ console.log("Wow, you have a REALLY long name!");
+} else {
+ console.log("Your name isn't very long.");
+}
+
+26. Chaining if…else Statements
+
+var lemonChicken = false;
+var beefWithBlackBean = true;
+var sweetAndSourPork = true;
+
+if (lemonChicken) {
+ console.log("Great! I'm having lemon chicken!");
+} else if (beefWithBlackBean) {
+ console.log("I'm having the beef.");
+} else if (sweetAndSourPork) {
+ console.log("OK, I'll have the pork.");
+} else {
+ console.log("Well, I guess I'll have rice then.");
+}
+
+27. var lemonChicken = false;
+var beefWithBlackBean = false;
+var sweetAndSourPork = false;
+
+if (lemonChicken) {
+ console.log("Great! I'm having lemon chicken!");
+} else if (beefWithBlackBean) {
+ console.log("I'm having the beef.");
+} else if (sweetAndSourPork) {
+ console.log("OK, I'll have the pork.");
+}
+
+28. var name = true
+var dad's name = true
+var mom's name = true
+
+if (name === your name)    { 
+ console.log("Hello" + name); 
+
+} else if (name === dad's name){
+ console.log("Hi" + dad's name")
+} else if (name === mom's name){
+ console.log ("Hi" + mom's name)
+}
+
+29. Loops allow you to 
+run a piece of code multiple times, 
+depending on whether a condition remains true
+
+30. While loops start with the while keyword, 
+followed by a condition in parentheses and 
+then a body in braces
+
+EG: while (condition) {
+console.log("Do something");
+ i++;
+} 
+
+31. Like an if statement, the body of a while loop is executed if the 
+condition is true. 
+
+32. Unlike an if statement, the body,  the condition is checked again, 
+and if it’s still true, the body runs again. 
+This cycle goes on until the condition is false.
+
+33. var sheepCounted = 0;
+
+while (sheepCounted < 10) {
+console.log("I have counted " + sheepCounted + " sheep!");
+ sheepCounted++;
+}
+console.log("Zzzzzzzzzzz");
+
+I have counted 0 sheep!
+I have counted 1 sheep!
+I have counted 2 sheep!
+I have counted 3 sheep!
+I have counted 4 sheep!
+I have counted 5 sheep!
+I have counted 6 sheep!
+I have counted 7 sheep!
+I have counted 8 sheep!
+I have counted 9 sheep!
+Zzzzzzzzzzz
+
+This repeats until sheepCounted becomes 10, at which point the 
+condition becomes false (10 is not less than 10), and the program 
+moves on to whatever comes after the loop. In this case, it prints 
+Zzzzzzzzzzz.
+ 
+34. for Loops
+
+When setting up a for loop, you create 
+a variable, specify the condition, and say how the variable should 
+change after each cycle—all before you reach the body of the loop.
+
+EG:
+for (var sheepCounted = 0; sheepCounted < 10; sheepCounted++) {
+ console.log("I have counted " + sheepCounted + " sheep!");
+}
+console.log("Zzzzzzzzzzz");
+
+EG:
+var timesToSayHello = 3;
+for (var i = 0; i < timesToSayHello; i++) {
+ console.log("Hello!");
+}
+Here is the output:
+Hello!
+Hello!
+Hello!
+
+for (var x = 3; x < 10000; x * 3) {
+    console.log(x);
+}
+
+var x = 3;
+While (x < 10000) {console.log(x * 3);
+x++;
+
+}
+
+// Write a text based calculator. 
+// The calculator will take strings in this format:
+
+// `Add 2 and 4`
+// `Subtract 3 from 5`
+// `Divide 6 by 2`
+// `Multiply 3 by 7`
+
+// The calculator will then calculate and `return` the answer.
+
+// You only need to handle `subtract`, `add`, `divide`, and `multiply`.
+
+// * Bonus:
+//   * Use a `switch` statement.
+//   * If a user enters a string not in the above format, return a error message that tells them what they did wrong.
+
+var test1 = `Add 2 and 4`
+var test2 = `Subtract 3 from 5`
+var test3 = `Divide 6 by 2`
+var test4 = `Multiply 3 by 7`
+
+// recognize `Add 2 and 4` as->  2 + 4 
+// look at last few assignments
+ 
+var stringCalculator = function(arg) {
+    
+    // To standardize user input--toLowerCase
+    // split into array by space
+    var splitArg = arg.toLowerCase().split("");
+    // split string into array by space and make lowercase to standardize user input so   
+
+    // if statement for bonus to check for and handle user input errors (Array should have 4 items or tell user there is an error)
+    
+    // Parsing in coding - the process of analyzing a sequence of symbols or text (often code or data) 
+    // to extract meaningful information. Typically involves breaking down the input into smaller components 
+    // and understanding their structure and relationships according to predefined rules.
+    // parseInt() parses a string and returns first integer:
+    if (splitArg.length != 4 || isNaN(parseInt(splitArg[1])) || isNaN(parseInt(splitArg[3])) ) { 
+        console.log("Invalid Request Format. Try Again.")
+
+    } else {
+        // switch statements checks [0] of index and will proceed with certain action depending on what is listed beneath math operator,
+        // or d   
+       switch (splitArg[0]){
+        case "multiply":
+            return parseInt(splitArg[1]) * parseInt(splitArg[3])
+        case "add":   
+            return parseInt(splitArg[1]) + parseInt(splitArg[3])
+        case "subtract":
+            return parseInt(splitArg[3]) - parseInt(splitArg[1])
+        case "divide": 
+            return parseInt(splitArg[1]) / parseInt(splitArg[3])
+        default:
+            console.log("Error, Please make sure your spelling is correct and try again.")
+            break;
+       }
+    }
+}   
+
+stringCalculator(test1)
+
+// // recognize "Add 2 and 4" and convert it into "2 + 4", 
+// function parse(test1) {
+//     parseInt(test1)
+ 
+// }
+
+// parseInt(test1)
+
+   
+
+// // Here's a simple text-based calculator in JavaScript that handles addition, subtraction, multiplication, and division using a switch statement. 
+// // It also includes error handling for incorrect input formats.
+
+
+// function calculate(input) {
+//     // Regular expression to match the input format
+//     const regex = /^(Add|Subtract|Divide|Multiply) (\d+) (and|from|by) (\d+)$/i;
+//     const match = input.match(regex);
+
+//     if (!match) {
+//         return "Error: Invalid input format. Please use 'Add X and Y', 'Subtract X from Y', 'Divide X by Y', or 'Multiply X by Y'.";
+//     }
+
+//     const operation = match[1].toLowerCase();
+//     const num1 = parseFloat(match[2]);
+//     const num2 = parseFloat(match[4]);
+
+//     switch (operation) {
+//         case 'add':
+//             return num1 + num2;
+//         case 'subtract':
+//             return num2 - num1; // Subtracting num1 from num2
+//         case 'divide':
+//             return num2 / num1; // Dividing num2 by num1
+//         case 'multiply':
+//             return num1 * num2;
+//         default:
+//             return "Error: Unsupported operation.";
+//     }
+// }
+
+// // Example usage:
+// // console.log(calculate("Add 2 and 4"));       // 6
+// // console.log(calculate("Subtract 3 from 5")); // 2
+// // console.log(calculate("Divide 6 by 2"));     // 3
+// // console.log(calculate("Multiply 3 by 7"));   // 21
+// // console.log(calculate("Subtract 2 from"));    // Error message
+
+// // Explanation:
+// // The regular expression checks if the input string matches the expected format for the four operations.
+// If the input doesn't match, an error message is returned.
+// The switch statement determines which operation to perform based on the first word of the input.
+// Each case handles the operation and returns the result.
+
+
+// The line of code you provided defines a regular expression (regex) in JavaScript. Here's a breakdown of its components:
+
+// const regex = /^(Add|Subtract|Divide|Multiply) (\d+) (and|from|by) (\d+)$/i;
+// Breakdown:
+// ^: This asserts that the match must start at the beginning of the string.
+// (Add|Subtract|Divide|Multiply): This part matches one of the four specified operations. The vertical bar | acts as a logical "or". So, it will match if the string starts with "Add", "Subtract", "Divide", or "Multiply".
+//  (\d+): This matches a space followed by one or more digits (\d represents a digit, and the + means "one or more"). This captures the first number in the operation.
+//  (and|from|by): This matches a space followed by one of the words "and", "from", or "by". This indicates the connective word used in the operation.
+//  (\d+): Similar to before, this matches a space followed by one or more digits. This captures the second number in the operation.
+// $: This asserts that the match must occur at the end of the string.
+// i: This is a flag that makes the regex case-insensitive, meaning it will match "add", "Add", "ADD", etc.
+// Summary:
+// The regex checks if the input string follows the format of an arithmetic operation involving two numbers and a specified operation, such as "Add 2 and 4". 
+// If the input matches this pattern, the capturing groups can be used to extract the operation and the numbers for further processing. If it doesn't match, the input is considered invalid.
+
+
+// The line of code you provided:
+
+// const match = input.match(regex);
+// Breakdown:
+// input: This variable is expected to be a string that contains the user's input, such as "Add 2 and 4".
+// .match(regex): This method is called on the input string. 
+// The .match() function is a built-in JavaScript method that tests a string against a regular expression (in this case, regex).
+// regex: This is the regular expression defined earlier, which checks for a specific format of arithmetic operations.
+// What it does:
+// The .match() method attempts to find a match between the input string and the pattern defined in regex.
+// If a match is found, it returns an array containing the full match and any captured groups. 
+// The first element of the array is the entire matched string, and subsequent elements correspond to the capturing groups in the regex (like the operation and the numbers).
+// If no match is found, it returns null.
+// Example:
+// For an input like "Add 2 and 4":
+
+// The regex will match successfully, and match will contain an array like:
+// javascript
+
+// Copy
+// ["Add 2 and 4", "Add", "2", "and", "4"]
+// If the input is invalid, such as "Add 2 from", match would be null.
+
+// Summary:
+// This line of code is used to determine whether the input string follows the expected format defined by the regex. 
+// If it matches, the match variable will hold the details of the match; if not, it will indicate a failure to match.
